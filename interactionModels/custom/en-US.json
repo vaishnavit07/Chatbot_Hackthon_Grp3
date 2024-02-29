@@ -1,0 +1,252 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "month",
+              "elicitationRequired": true,
+              "type": "AMAZON.Month",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1072665551316.832963452891"
+              }
+            },
+            {
+              "name": "day",
+              "elicitationRequired": true,
+              "type": "AMAZON.Ordinal",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1072665551316.1651365877965"
+              }
+            },
+            {
+              "name": "year",
+              "elicitationRequired": true,
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1072665551316.1118270007014"
+              }
+            }
+          ],
+          "name": "CaptureZodiacSignIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "genre",
+              "elicitationRequired": true,
+              "type": "AMAZON.Genre",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1311269900554.816325296546"
+              }
+            },
+            {
+              "name": "author",
+              "elicitationRequired": true,
+              "type": "AMAZON.Author",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1311269900554.392485807281"
+              }
+            },
+            {
+              "name": "year",
+              "elicitationRequired": true,
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1311269900554.1150757389640"
+              }
+            }
+          ],
+          "name": "GetSuggestedBookIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "month",
+              "type": "AMAZON.Month"
+            },
+            {
+              "name": "day",
+              "type": "AMAZON.Ordinal"
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER"
+            }
+          ],
+          "name": "CaptureZodiacSignIntent",
+          "samples": [
+            "I was born on November seventh two thousand",
+            "get zodiac sign",
+            "I was born on {month} {day} {year}",
+            "get my zodiac sign",
+            "find out what my zodiac sign is",
+            "do you know what my zodiac sign is",
+            "zodiac sign",
+            "want to know my zodiac sign",
+            "can you give my zodiac sign",
+            "can you tell my zodiac sign",
+            "can you tell me what my zodiac sign is",
+            "what is your take on my zodiac sign",
+            "say my zodiac sign",
+            "tell my zodiac sign once more",
+            "please repeat my zodiac sign",
+            "please state my zodiac sign once more",
+            "i was born on {day} {month} {year} what is my zodiac sign",
+            "tell zodiac sign for my birthday",
+            "for my birthday please tell me my zodiac sign",
+            "tell me my birthday zodiac sign",
+            "tell me my zodiac sign for my birthday",
+            "let me know my zodiac sign",
+            "please tell me what my zodiac sign is based on my birthday",
+            "could you please tell me what my zodiac sign is",
+            "whats the zodiac sign",
+            "i was born on {year} {month} {day}",
+            "i was born on {day} {month}",
+            "i was born on {month} {day}",
+            "i was born on {month} {year}",
+            "in {month} of {year} i was born",
+            "i was born in {month}",
+            "i was born on {year}",
+            "i was born on {day}",
+            "my birth day is on {day} {month} {year}",
+            "my birthday is on {day} {month} {year}",
+            "my birthday is {month} {day} {year}",
+            "{month}",
+            "{day}",
+            "{year}",
+            "{day} {month}",
+            "{month} {day}",
+            "{month} {year}",
+            "{year} {month}",
+            "{year} {month} {day}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "genre",
+              "type": "AMAZON.Genre"
+            },
+            {
+              "name": "author",
+              "type": "AMAZON.Author"
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER"
+            }
+          ],
+          "name": "GetSuggestedBookIntent",
+          "samples": [
+            "Any {genre} books from the {year} ",
+            "Recommend a {genre} novel by {author}"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "get chatbot"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": " {month}"
+          }
+        ],
+        "id": "Elicit.Slot.792814226298.1447308559990"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What month were you born ?"
+          }
+        ],
+        "id": "Elicit.Slot.1072665551316.832963452891"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What day were you born ?"
+          }
+        ],
+        "id": "Elicit.Slot.1072665551316.1651365877965"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What year were you born ?"
+          }
+        ],
+        "id": "Elicit.Slot.1072665551316.1118270007014"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which genre of book you want?"
+          }
+        ],
+        "id": "Elicit.Slot.1311269900554.816325296546"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the name of author?"
+          }
+        ],
+        "id": "Elicit.Slot.1311269900554.392485807281"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which year this book was published?"
+          }
+        ],
+        "id": "Elicit.Slot.1311269900554.1150757389640"
+      }
+    ]
+  }
+}
